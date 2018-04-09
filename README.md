@@ -20,4 +20,14 @@ How to use [Seasoned Software](https://seasoned.software)
 
 * Make file `seasoned-software.sh` in the root of your
   repository. This file should specify how to compile all the `cargo
-  fuzz` targets in your project.
+  fuzz` targets in your project, and then it should call
+  `register-binary` for each target you want to use as fuzz harness.
+
+  In this project we only have one target: `quicksort`
+
+* Now go to <https://app.seasoned.software> and add your project.
+
+  When you add your project you need to tell which git branch to use
+  (`master` in our case) and which harness to use, the harness is the
+  name of one of the binaries we registered with `register-binary`. In
+  this project we only have one harness `quicksort`.
