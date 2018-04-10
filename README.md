@@ -36,7 +36,7 @@ How to use [Seasoned Software](https://seasoned.software)
     cargo fuzz run quicksort --release -- -help=1
 
     # Find the executable for the fuzz target
-    EXE="$(find fuzz/target -iname $t -executable)"
+    EXE="$(find fuzz/target -iname quicksort -executable)"
 
     # Register the fuzz target
     register-binary "quicksort" "$EXE"
