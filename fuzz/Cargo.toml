@@ -20,3 +20,7 @@ members = ["."]
 [[bin]]
 name = "quicksort"
 path = "fuzz_targets/quicksort.rs"
+
+[[bin]]
+name = "password"
+path = "fuzz_targets/password.rs"
