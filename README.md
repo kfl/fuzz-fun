@@ -12,6 +12,34 @@ This repository demonstrate two things:
 How to use `cargo-fuzz`
 -----------------------
 
+ *  See the [`cargo-fuzz` tutorial](https://rust-fuzz.github.io/book/cargo-fuzz/tutorial.html)
+ *  To set up fuzz testing for this project
+
+    1. Install `cargo-fuzz`:
+
+         cargo install cargo-fuzz
+
+    2. Change the project to use nightly Rust:
+
+         rustup override set nightly
+
+    3. Initialise `cargo-fuzz`
+
+         cargo fuzz init
+
+    4. Add a new fuzz target:
+
+         cargo fuzz add quicksort
+
+    5. Edit the file `fuzz/fuzz_targets/quicksort.rs` to contain your
+       fuzz harness
+
+    6. Start fuzzing
+
+         cargo fuzz run quicksort
+
+    7. Optionally delete the file `fuzz/fuzz_target_1.rs` and clean up
+       `fuzz/Cargo.toml`
 
 How to use [Seasoned Software](https://seasoned.software)
 ---------------------------------------------------------
