@@ -11,8 +11,8 @@ fuzz_target!(|data: &[u8]| {
     if data[3] != b'r' {return}
     if data[4] != b'd' {return}
     if data[5] != b'f' {return}
-    if data[3] != b'i' {return}
-    if data[4] != b's' {return}
-    if data[5] != b'h' {return}
+    if data[6] != b'i' {return}
+    if data[7] != b's' {return}
+    if data[8] != b'h' {return}
     panic!("Password found")
 });
