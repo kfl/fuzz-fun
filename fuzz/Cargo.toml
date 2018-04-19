@@ -28,3 +28,7 @@ path = "fuzz_targets/password.rs"
 [[bin]]
 name = "combined"
 path = "fuzz_targets/combined.rs"
+
+[[bin]]
+name = "notbad"
+path = "fuzz_targets/notbad.rs"
